@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>工具箱页面</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+
+                font-family: Arial, sans-serif;
+            }
+
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                position: sticky;
+                top: 0px;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+            nav ul li:hover {
+                text-decoration: underline;
+            }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                padding: 5px;
+            }
+
+            aside {
+                background-color: #f2f2f2;
+                width: 200px;
+                padding: 20px;
+                height: 100vh;
+            }
+
+            aside ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            aside ul li {
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+
+            aside ul li a {
+                text-decoration: none;
+                color: #333;
+                display: block;
+            }
+
+            .active {
+                font-weight: bold;
+            }
+
+            .a_active {
+                text-decoration: underline;
+            }
+
+            .box {
+                width: 100%;
+                display: flex;
+
+            }
+
+            .one,
+            .two,
+            .three {
+                margin-left: 15px;
+
+            }
+
+            .two,
+            .three {
+                display: none;
+            }
+
+            h1 {
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">主页</a></li>
+                    <li><a href="./teamwork.html">协同工作</a></li>
+                    <li><a href="./grades.html">成绩查询</a></li>
+                    <li class="a_active"><a href="./tool.html">工具库</a></li>
+                    <li><a href="./login.html">登录</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="box">
+            <aside>
+                <ul class="list">
+                    <li class="active">图书馆</li>
+                    <li>教育局</li>
+                    <li>搜索引擎</li>
+                </ul>
+            </aside>
+            <main class="mian_body">
+                <div class="one">
+                    <h1>网络图书馆的功能</h1>
+                    <h5>网络图书馆是现代科技的杰作，它不仅具备传统图书馆的所有功能，还在数字化和网络化的基础上，实现了许多前所未有的便捷功能。</h5>
+                    <p>
+                        1. 丰富的资源：网络图书馆拥有海量的电子书籍、期刊、论文等资源，涵盖了各个学科领域，为读者提供了丰富的知识选择
+                    </p>
+
+                    <p>
+                        2. 便捷的检索：通过高效的搜索引擎，读者可以迅速找到所需的文献资料，节省了大量时间和精力。
+                    </p>
+                    <p>
+                        3. 个性化推荐：根据读者的阅读习惯和偏好，网络图书馆会智能推荐相关书籍和资料，提高阅读的针对性和效率。
+                    </p>
+                    <p>
+                        4. 多种阅读方式：网络图书馆支持在线阅读、下载阅读、移动阅读等多种方式，满足读者在不同场景下的阅读需求。
+                    </p>
+                    <p>
+                        5. 互动交流平台：读者可以在网络图书馆内发表评论、参与讨论、分享心得，形成了一个充满活力的学术交流社区。
+                    </p>
+                    <p>
+                        6. 实时更新与维护：网络图书馆会定期更新资源、优化系统，确保读者能够享受到最新、最优质的服务。
+                        总之，网络图书馆以其独特的优势和功能，为现代读者提供了一个高效、便捷、个性化的阅读平台。
+                    </p>
+                </div>
+
+                <div class="two">
+                    <h1>教育局网络链接介绍</h1>
+                    <p>
+                        随着信息科技的迅猛发展，网络已经渗透到生活的方方面面。为更好地满足教育部门的信息化建设需求，教育局积极推出了一系列网络链接服务，旨在为广大师生、家长及教育工作者提供更加便捷、高效的信息交流与学习平台。
+                    </p>
+
+                    <p>
+                        教育局网络链接涵盖了多个方面，包括教育资源、政策公告、在线办公等。通过教育局官方网站，用户可以轻松获取到最新的教育政策、通知公告等信息，了解教育部门的工作动态和发展趋势。此外，教育局还提供了丰富多样的教育资源，如教学课件、教案设计、在线课程等，为广大师生提供了一站式的教育资源服务。
+                    </p>
+                    <p>
+                        除了教育资源外，教育局网络链接还提供了在线办公功能，如电子教务管理、学生信息管理、在线考试等。这些功能不仅提高了工作效率，还为学生和家长提供了更加便捷的服务。例如，家长可以通过在线办公系统查询孩子的成绩、出勤等情况，与学校保持密切沟通。
+                    </p>
+                    <p>
+                        为了保障网络链接的安全与稳定，教育局还采取了多项措施。一方面，教育局加强了网络安全管理，确保用户信息的安全与隐私。另一方面，教育局还不断优化网络链接的速度和稳定性，为用户提供更加流畅的网络体验。
+                    </p>
+                    <p>
+                        总之，教育局网络链接的推出为教育部门信息化建设注入了新的活力。通过这一平台，广大师生、家长及教育工作者可以更加便捷地获取教育资源、了解政策动态、进行在线办公等操作。相信在不久的将来，教育局网络链接将成为推动教育事业发展的重要力量。
+                    </p>
+                </div>
+
+                <div class="three">
+                    <h1>搜索引擎</h1>
+                    <p>
+                        搜索引擎在现代社会中扮演着至关重要的角色。它们不仅帮助我们快速找到所需信息，还提供了诸多便利和功能，让我们的生活变得更加高效和丰富。
+                    <p>
+                        搜索引擎的出现极大地改变了我们的信息获取方式。在没有搜索引擎的时代，我们需要依靠传统的方式如图书馆、书店等来获取信息。而有了搜索引擎，我们只需要在搜索框中输入关键词，就可以迅速获得大量的相关信息。这种便捷的信息获取方式不仅节省了我们的时间，还让我们能够更全面地了解各种领域的知识。
+                    </p>
+                    <p>
+                        除了快速获取信息外，搜索引擎还提供了许多其他的功能。例如，我们可以通过搜索引擎查找附近的商家、餐厅、景点等，了解它们的详细信息、评价和推荐。此外，搜索引擎还可以帮助我们翻译语言、查找学术资料、了解新闻动态等。这些功能极大地丰富了我们的生活，让我们能够更加便捷地获取所需信息。
+                    </p>
+                    <p>
+                        当然，搜索引擎也需要注意一些问题。例如，我们需要保护个人隐私，避免在搜索引擎中输入过于敏感的信息。同时，我们也需要学会筛选搜索结果，避免被不准确或虚假的信息误导。 </p>
+                    <p>
+                        总之，搜索引擎在现代社会中发挥着不可或缺的作用。我们需要善加利用它，让它成为我们获取信息、了解世界的得力助手。 </p>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script>
+        var liDoms = document.querySelectorAll('.list li')
+        var divDoms = document.querySelectorAll('.mian_body div')
+        // console.log(liDoms);
+        // console.log(divDoms);
+        for (let i = 0; i < liDoms.length; i++) {
+
+            liDoms[i].onclick = () => {
+                for (let j = 0; j < liDoms.length; j++) {
+                    divDoms[j].style.display = 'none'
+                    liDoms[j].classList.remove('active')
+
+                }
+                divDoms[i].style.display = 'block'
+                liDoms[i].classList.add('active')
+            }
+
+        }
+    </script>
+
+</html>

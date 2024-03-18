@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>登录页面</title>
+  <style>
+    /* CSS 样式 */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #152238;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #152238;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .login-tabs label {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>登录</h2>
+
+    <div class="login-tabs">
+      <label>
+        <input type="radio" name="userType" value="student" checked>
+        学生
+      </label>
+      <label>
+        <input type="radio" name="userType" value="teacher">
+        老师
+      </label>
+    </div>
+
+    <form id="loginForm">
+      <input type="text" id="username" name="username" placeholder="账号">
+      <input type="password" id="password" name="password" placeholder="密码">
+      <input type="submit" value="登录">
+    </form>
+  </div>
+
+  <script>
+    // JavaScript 代码
+    const loginForm = document.getElementById('loginForm');
+
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const userType = document.querySelector('input[name="userType"]:checked').value;
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (userType === 'student' && username === 'stu001' && password === 'student123') {
+        alert('来自学生端：登录成功！')
+        window.location.href = './index.html';
+      } else if (userType === 'teacher' && username === 'teach001' && password === 'teacher123') {
+        window.location.href = './index.html';
+        alert('来自教师端：登录成功！')
+      } else {
+        alert('账号或密码错误，请重新输入！');
+      }
+    });
+    
+  </script>
+</body>
+</html>

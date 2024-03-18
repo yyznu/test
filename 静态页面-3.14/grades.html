@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>成绩查询页面</title>
+        <style>
+            /* CSS 样式 */
+            body {
+                margin: 0;
+                padding: 0;
+
+                font-family: Arial, sans-serif;
+            }
+
+            .box {
+                display: flex;
+            }
+
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                position: sticky;
+                top: 0px;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+            nav ul li:hover {
+                text-decoration: underline;
+            }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                padding: 5px;
+            }
+
+            aside {
+                background-color: #f2f2f2;
+                width: 200px;
+                padding: 20px;
+                height: 100vh;
+            }
+
+            aside ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            aside ul li {
+                margin-bottom: 10px;
+            }
+
+            aside ul li a {
+                text-decoration: none;
+                color: #333;
+                display: block;
+            }
+
+            .active {
+                font-weight: bold;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            h1 {
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            select,
+            input[type="text"],
+            input[type="submit"] {
+                margin-right: 10px;
+            }
+            .a_active{
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">主页</a></li>
+                    <li><a href="./teamwork.html">协同工作</a></li>
+                    <li class="a_active"><a href="./grades.html">成绩查询</a></li>
+                    <li><a href="./tool.html">工具库</a></li>
+                    <li><a href="./login.html">登录</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="box">
+            <aside>
+                <ul>
+                    <li><a href="#" class="active" onclick="showTab('input')">录入</a></li>
+                    <li><a href="#" onclick="showTab('query')">查询</a></li>
+                </ul>
+            </aside>
+
+            <main>
+                <div id="inputTab">
+                    <h1>录入成绩</h1>
+
+                    <form>
+                        <select id="subject">
+                            <option value="math">数学</option>
+                            <option value="english">英语</option>
+                            <option value="history">历史</option>
+                        </select>
+
+                        <input type="text" id="scoreInput" placeholder="请输入成绩">
+
+                        <input type="submit" value="提交" onclick="submitScore()">
+                    </form>
+                </div>
+
+                <div id="queryTab" style="display: none;">
+                    <h1>查询成绩</h1>
+
+                    <form>
+                        <select id="subjectQuery">
+                            <option value="math">数学</option>
+                            <option value="english">英语</option>
+                            <option value="history">历史</option>
+                        </select>
+
+                        <input type="submit" value="查询" onclick="queryScore()">
+                    </form>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            // JavaScript 代码
+            function showTab(tabName) {
+                const inputTab = document.getElementById('inputTab');
+                const queryTab = document.getElementById('queryTab');
+                const inputLink = document.querySelector('a[href="#"][onclick="showTab(\'input\')"]');
+                const queryLink = document.querySelector('a[href="#"][onclick="showTab(\'query\')"]');
+
+                if (tabName === 'input') {
+                    inputTab.style.display = 'block';
+                    queryTab.style.display = 'none';
+                    inputLink.classList.add('active');
+                    queryLink.classList.remove('active');
+                } else if (tabName === 'query') {
+                    inputTab.style.display = 'none';
+                    queryTab.style.display = 'block';
+                    inputLink.classList.remove('active');
+                    queryLink.classList.add('active');
+                }
+            }
+
+            function submitScore() {
+                const subject = document.getElementById('subject').value;
+                const score = document.getElementById('scoreInput').value;
+
+                // TODO: 处理提交成绩的逻辑
+                console.log('提交成绩', subject, score);
+            }
+
+            function queryScore() {
+                const subject = document.getElementById('subjectQuery').value;
+
+                // TODO: 处理查询成绩的逻辑
+                console.log('查询成绩', subject);
+            }
+        </script>
+    </body>
+
+</html>
